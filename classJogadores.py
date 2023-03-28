@@ -1,9 +1,9 @@
 from tkinter import *
 
 class Jogador:
-    def __init__(self,sexo,nome,time, selecao):
-        self.sexo = sexo
+    def __init__(self, nome, sexo, time, selecao):
         self.nome = nome
+        self.sexo = sexo
         self.time = time
         self.selecao = selecao
 
