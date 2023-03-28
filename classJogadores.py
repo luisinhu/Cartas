@@ -9,11 +9,13 @@ class Jogador:
 
     def card(self):
         carta = Tk()
+        texto = "JOGADORES"
         carta.title(self.nome)
-        carta.geometry("247x350")
+        carta.geometry("350x450")
         carta.resizable(False, False)
 
-
+        caixa_texto=Label(carta, text= texto)
+        caixa_texto.pack()
         imgJogador = PhotoImage(file="images/"+self.nome+".png")
         label = Label(carta, image=imgJogador)
         label.pack()
