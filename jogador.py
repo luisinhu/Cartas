@@ -1,6 +1,10 @@
+#2 ano vespertino
+#Alunos: 
 import random
 class Jogado:
+#class 
     def __init__(self,sexo,nome,time, selecao,passe,fina, ritmo, dribra):
+        #atributos
         self.sexo = sexo
         self.nome = nome
         self.time = time
@@ -25,7 +29,7 @@ class Jogado:
 
         
 
-
+#metodos 
     def compara (self, oponente):
         escolha_atributo = input("Escolha um atributo para comparar")
         if escolha_atributo == "1":
