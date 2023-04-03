@@ -1,5 +1,6 @@
 #2 ano vespertino
 #Alunos: Daniel Guimarães Souza, Danielly Vitória Ferreira da Costa, Luis Henrique Silva Botelho e Marcos Aurélio
+#float 
 
 
 class Jogado:
