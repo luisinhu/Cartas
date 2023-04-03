@@ -1,6 +1,7 @@
 #2 ano vespertino
-#Alunos: 
-import random
+#Alunos: Daniel Guimarães Souza, Danielly Vitória Ferreira da Costa, Luis Henrique Silva Botelho e Marcos Aurélio
+
+
 class Jogado:
 #class 
     def __init__(self,sexo,nome,time, selecao,passe,fina, ritmo, dribra):
@@ -16,37 +17,37 @@ class Jogado:
 
     def imp (self):
         print("="*20)
-        print("Nome: "+self.nome)
-        print("Seleção: "+self.selecao)
-        print("Time: "+self.time)
-        print("Sexo: "+self.sexo)
+        print("Nome:"+self.nome)
+        print("Seleção:"+self.selecao)
+        print("Time:"+self.time)
+        print("Sexo:"+self.sexo)
         print("="*20)
-        print("Passe: ",self.passe)
-        print("Finalização: ",self.fina)
-        print("Ritmo: ",self.ritmo)
-        print("Drible: ", self.dribra)
+        print("Passe:",self.passe)
+        print("Finalização:",self.fina)
+        print("Ritmo:",self.ritmo)
+        print("Drible:", self.dribra)
         print("="*20)
 
         
 
 #metodos 
     def compara (self, oponente):
-        escolha_atributo = input("Escolha um atributo para comparar")
+        escolha_atributo = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\nR: ")
         if escolha_atributo == "1":
-            if self.dribra > oponente.dribra:
+            if self.dribra > oponente+self.dribra:
                 print("O ganhador é "+self.nome)
             else:
-                print("O ganhador é "+oponente.nome)
-        elif escolha_atributo == "2":
-            if self.passe > oponente.passe:
-                print("O ganhador é "+self.nome)
+                print("O perdedor é "+self.nome)
+        if escolha_atributo == "2":
+            if self.passe > oponente+self.passe:
+                print("O ganhador é ",self.nome)
             else:
-                print("O ganhador é "+oponente.nome)
-        elif escolha_atributo == "3":
-            if self.ritmo < oponente.ritmo:
-                print("O ganhador é" +self.nome)
+                print("O perdedor é ",self.nome)
+        if escolha_atributo == "3":
+            if self.ritmo >  oponente+self.ritmo:
+                print("O ganhador é" ,self.nome)
             else:
-                print("O ganhador é "+oponente.nome)
+                print("O perdedor é ",self.nome)
 
 
 
