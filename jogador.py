@@ -41,22 +41,17 @@ class Jogado:
     def compara (self, oponente):
         escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: ")
         if escolha_atribruto == "1":
-            if oponente+self.dribra > self.dribra:
+            if self.dribra > oponente+self.dribra:
                 print(f"{self.nome} é o ganhador")
                 return oponente
-            elif self.dribra > oponente+self.dribra:
-                print(f"{self.nome} é o ganhador")
-                return oponente
+
             else:
                 print(f"{self.nome} é o perdedor ")
                 return oponente
 
         if escolha_atribruto == "2":
-            if oponente+self.passe > self.passe:
+            if self.passe > oponente+self.passe:
                 print(f"{self.nome} o é ganhador  ")
-                return oponente
-            elif self.passe > oponente+self.passe:
-                print(f"{self.nome} é o ganhador")
                 return oponente
             
             else:
@@ -64,21 +59,16 @@ class Jogado:
                 return oponente
                 
         if escolha_atribruto == "3":
-            if oponente+self.ritmo > self.ritmo:
+            if self.ritmo > oponente+self.ritmo:
                 print(f"{self.nome} é o ganhador ")
                 return oponente
-            elif self.ritmo > oponente+self.ritmo:
-                print(f"{self.nome} é o ganhador")
-                return oponente
+            
             
             else:
                 print("O perdedor é ",self.nome)
                 return oponente
         if escolha_atribruto == "4":
-            if oponente+self.fina > self.fina:
-                print(f"{self.nome} é o ganhador")
-                return oponente
-            elif self.fina > oponente+self.fina:
+            if self.fina > oponente+self.fina:
                 print(f"{self.nome} é o ganhador")
                 return oponente
             
@@ -87,24 +77,21 @@ class Jogado:
                 return oponente
         
         if escolha_atribruto == "5":
-            if  oponente+self.fisico > self.fisico:
+            if  self.fisico > oponente+self.fisico:
                 print(f"{self.nome} é o ganhador")
                 return oponente
-            elif self.fisico > oponente+self.fisico:
-                print(f"{self.nome} é o ganhador")
-                return oponente
+    
             
             else:
                 print(f"{self.nome} é o perdedor")
                 return oponente
         
         if escolha_atribruto == "6":
-            if oponente+self.defesa > self.defesa:
+            if self.defesa > oponente+self.defesa:
                 print(f"{self.nome} é o ganhador")
                 return oponente
-            elif self.defesa > oponente+self.defesa:
-                print(f"{self.nome} é o ganhador")
-                return oponente
+           
             else:
                 print(f"{self.nome} é o perdedor")
                 return oponente
+

@@ -76,8 +76,6 @@ if sorteio2 == 6:
     Debinha.compara(sorteio2)
 
 
-#jogo das cartas
-
 
 
 
