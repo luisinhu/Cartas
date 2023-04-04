@@ -1,7 +1,7 @@
 #2 ano vespertino
 #Alunos: Daniel Guimarães Souza, Danielly Vitória Ferreira da Costa, Luis Henrique Silva Botelho e Marcos Aurélio
 #float 
-
+import random
 
 class Jogado:
 #class 
@@ -15,7 +15,7 @@ class Jogado:
         self.fina = fina
         self.ritmo = ritmo
         self.dribra = dribra
-
+    #metodos 
     def imp (self):
         print("="*20)
         print("Nome:"+self.nome)
@@ -31,26 +31,31 @@ class Jogado:
 
         
 
-#metodos 
+
     def compara (self, oponente):
-        escolha_atributo = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\nR: ")
-        if escolha_atributo == "1":
+        escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\nR: ")
+        if escolha_atribruto == "1":
             if self.dribra > oponente+self.dribra:
                 print("O ganhador é "+self.nome)
+                return oponente
             else:
                 print("O perdedor é "+self.nome)
-        if escolha_atributo == "2":
+                return oponente
+
+        if escolha_atribruto == "2":
             if self.passe > oponente+self.passe:
                 print("O ganhador é ",self.nome)
+                return oponente
             else:
                 print("O perdedor é ",self.nome)
-        if escolha_atributo == "3":
+                return oponente
+                
+        if escolha_atribruto == "3":
             if self.ritmo >  oponente+self.ritmo:
                 print("O ganhador é" ,self.nome)
             else:
                 print("O perdedor é ",self.nome)
-
-
-
-
-
+    def sorteia(lista_jogadores):
+        numero = random.randint (0,len(lista_jogadores))
+        numero -=1
+        return numero
