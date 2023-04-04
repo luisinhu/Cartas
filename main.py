@@ -3,22 +3,20 @@ import random
 import time
 
 #criando os objetos
-benzema = Jogado("M", "Benzema", "Real", "França",90,97,92,94)
-neymar = Jogado("M", "Neymar", "PSG", "Brasil",87,87,90,95)
-pelé = Jogado("M", "Pelé", "Santos", "Brasil",96,96,99,76)
-bappe = Jogado("M", "Mbappe", "PSG", "França",88,88,88,88)
-formiga = Jogado("F","Formiga","PSG","Brasil",80,78,76,77)
-Marta = Jogado("F","Marta","Orlando Pride","Brasil",90,89,85,96)
-Debinha = Jogado("F","Debinha","Kansas City Current","Brasil",93,88,85,87)
+benzema = Jogado("M", "Benzema", "Real", "França",90,97,92,94,45,90)
+neymar = Jogado("M", "Neymar", "PSG", "Brasil",87,87,90,95,39,64)
+pelé = Jogado("M", "Pelé", "Santos", "Brasil",96,96,99,76,60,76)
+bappe = Jogado("M", "Mbappe", "PSG", "França",88,96,99,98,44,87)
+formiga = Jogado("F","Formiga","PSG","Brasil",80,78,76,77,90,92)
+Marta = Jogado("F","Marta","Orlando Pride","Brasil",90,89,85,96,34,70)
+Debinha = Jogado("F","Debinha","Kansas City Current","Brasil",93,88,85,87,50,77)
 
 
 
 lista_de_oponentes = [benzema, neymar, pelé ,bappe,formiga,Marta,Debinha]
 sorteio  =  random.randint ( 0 , len( lista_de_oponentes ))
 sorteio -= 1
-
-
-    #chamando as cartas
+#chamando as cartas
 if sorteio == 0:
    print("Essa é sua carta 1:")
    benzema.imp()
@@ -51,7 +49,7 @@ sorteio2 -= 1
 if sorteio2 == 0:
     print("Essa é sua carta 2:")
     benzema.imp()
-    benzema.compara(sorteio2)
+    benzema.compara(sorteio2 )
 if sorteio2 == 1:
     print("Essa é sua carta 2:")
     neymar.imp()
@@ -78,12 +76,7 @@ if sorteio2 == 6:
     Debinha.compara(sorteio2)
 
 
-
-
-
-
-
-
+#jogo das cartas
 
 
 
