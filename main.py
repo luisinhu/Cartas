@@ -49,31 +49,31 @@ sorteio2 -= 1
 if sorteio2 == 0:
     print("Essa é sua carta 2:")
     benzema.imp()
-    benzema.compara(sorteio2 )
+    benzema.compara(sorteio )
 if sorteio2 == 1:
     print("Essa é sua carta 2:")
     neymar.imp()
-    neymar.compara(sorteio2)
+    neymar.compara(sorteio)
 if sorteio2 == 2:
     print("Essa é sua carta 2:")
     pelé.imp()
-    pelé.compara(sorteio2)
+    pelé.compara(sorteio)
 if sorteio2 == 3:
     print("Essa é sua carta 2:")
     bappe.imp()
-    bappe.compara(sorteio2)
+    bappe.compara(sorteio)
 if sorteio2 == 4:
     print("Essa é sua carta 2:")
     formiga.imp()
-    formiga.compara(sorteio2)
+    formiga.compara(sorteio)
 if sorteio2 == 5:
     print("Essa é sua carta 2:")
     Marta.imp()
-    Marta.compara(sorteio2)
+    Marta.compara(sorteio)
 if sorteio2 == 6:
     print("Essa é sua carta 2:")
     Debinha.imp()
-    Debinha.compara(sorteio2)
+    Debinha.compara(sorteio)
 
 
 
