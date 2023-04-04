@@ -55,7 +55,3 @@ class Jogado:
                 print("O ganhador é" ,self.nome)
             else:
                 print("O perdedor é ",self.nome)
-    def sorteia(lista_jogadores):
-        numero = random.randint (0,len(lista_jogadores))
-        numero -=1
-        return numero
