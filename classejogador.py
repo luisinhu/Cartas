@@ -35,6 +35,9 @@ class Jogado:
     #função de comparar qual atributo é maior
     def compara (self, oponente):
         escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: ")
+        while escolha_atribruto != 1 and escolha_atribruto !=2 and escolha_atribruto != 3 and escolha_atribruto != 4 and escolha_atribruto != 5 and escolha_atribruto != 6:
+          print("Erro! número não reconhecido!")
+          escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: ") 
         if escolha_atribruto == "1":
           if self.drible > oponente.drible:
               print(f"{self.nome} tem o drible {self.drible} maior que o drible de {oponente.nome} que é {oponente.drible}")
@@ -108,6 +111,9 @@ class Jogado:
      #função de fazer a competição e mostrar o ganhador -Dani
     def definindo_ganhador(self, oponente):
       escolher = int(input("Escolha um atributo para competir\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: "))
+      while escolher != 1 and escolher !=2 and escolher != 3 and escolher != 4 and escolher != 5 and escolher != 6:
+        print("Erro! tente colocar um número correto")
+        escolher = int(input("Escolha um atributo para competir\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: "))
       if escolher == 1:
         if self.drible > oponente.drible:
           print(f"{self.nome} ganhou de {oponente.nome} no atributo drible")

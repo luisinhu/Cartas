@@ -54,6 +54,9 @@ carta_maquina = []
 #escolha da carta usuário -Daniel
 os.system('cls')
 escolher = int(input(f"Escolha de 1 a {len(lista_cartas)}\nR: "))
+while escolher != 1 and escolher != len:
+  print("Tente novamente!")
+  escolher = int(input(f"Escolha de 1 a {len(lista_cartas)}\nR: "))
 escolher = random.randint(0, len(lista_cartas))
 escolher -= 1
 carta_user = lista_cartas[escolher]
