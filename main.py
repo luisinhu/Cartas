@@ -21,7 +21,7 @@ while primeira_acao != 1 and primeira_acao != 2 :
 if primeira_acao == 1:
     loading = ("Carregando: {----------}")
     for i in range(11):
-        os.system('clear')
+        os.system('cls')
         print (loading)
         print ("")
         loading = loading.replace("-","=",1)
@@ -32,7 +32,7 @@ if primeira_acao == 2:
     print("Nossos programadores são:\nDaniel\nDanielly\nLuis\nMarcos")
     print("="*15,'\033[0;0m')
     time.sleep(4)
-    os.system('clear')
+    os.system('cls')
     print("Vamos lá")
 
 
@@ -54,17 +54,17 @@ carta_maquina = []
 #escolha da carta usuário -Daniel
 os.system('cls')
 escolher = int(input(f"Escolha de 1 a {len(lista_cartas)}\nR: "))
-while escolher != 1 and escolher != len:
+while escolher != 1 and escolher != 2 and escolher != 3 and escolher != 4 and escolher != 5 and escolher != 6 and escolher != 7:
   print("Tente novamente!")
   escolher = int(input(f"Escolha de 1 a {len(lista_cartas)}\nR: "))
 escolher = random.randint(0, len(lista_cartas))
 escolher -= 1
 carta_user = lista_cartas[escolher]
 
+#verificar qual carta foi escolhida e tirar da lista
 if escolher == 0:
   lista_cartas.remove(Jogador1)
   print("Essa é sua carta escolhida")
-  
   Jogador1.imprimir()
   
 
@@ -97,6 +97,8 @@ if escolher == 6: #debinha
   lista_cartas.remove(jogador7)
   print("Essa é sua carta escolhida")
   jogador7.imprimir()
+time.sleep(4)
+os.system('cls')
 
 
 #sorteio da máquina - Marcos
@@ -135,7 +137,7 @@ if sorteado == 6:
 
 
 #Comparação dos atributos Daniel e Marcos
-time.sleep(3)
+time.sleep(4)
 os.system('cls')
 carta_user.compara(oponente=carta_maquina)
 

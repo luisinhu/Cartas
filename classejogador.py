@@ -34,11 +34,11 @@ class Jogado:
         print("="*15)        
     #função de comparar qual atributo é maior
     def compara (self, oponente):
-        escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: ")
+        escolha_atribruto = int(input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: "))
         while escolha_atribruto != 1 and escolha_atribruto !=2 and escolha_atribruto != 3 and escolha_atribruto != 4 and escolha_atribruto != 5 and escolha_atribruto != 6:
           print("Erro! número não reconhecido!")
-          escolha_atribruto = input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: ") 
-        if escolha_atribruto == "1":
+          escolha_atribruto = int(input("Escolha um atributo para comparar\n[1]Drible\n[2]Passe\n[3]Ritmo\n[4]Finalização\n[5]Físico\n[6]Defesa\nR: "))
+        if escolha_atribruto == 1:
           if self.drible > oponente.drible:
               print(f"{self.nome} tem o drible {self.drible} maior que o drible de {oponente.nome} que é {oponente.drible}")
               return oponente
@@ -50,7 +50,7 @@ class Jogado:
             print(f"{oponente.nome} tem o drible {oponente.drible} maior que o drible de {self.nome} que tem o valor de {self.drible}")
             return oponente
 
-        if escolha_atribruto == "2":
+        if escolha_atribruto == 2:
           if self.passe > oponente.passe:
               print(f"{self.nome} tem o passe {self.passe} maior que o passe de {oponente.nome} que é {oponente.passe} ")
               return oponente
@@ -62,7 +62,7 @@ class Jogado:
             print(f"{oponente.nome} tem o passe {oponente.passe} maior que o passe de {self.nome} que é {self.passe}  ")
             return oponente
                 
-        if escolha_atribruto == "3":
+        if escolha_atribruto == 3:
           if self.ritmo > oponente.ritmo:
             print(f"{self.nome} tem o ritmo {self.ritmo} maior que o ritmo de{oponente.nome} que é {oponente.ritmo} ")
             return oponente
@@ -74,7 +74,7 @@ class Jogado:
           else:
               print(f"{oponente.nome} tem o ritmo {oponente.ritmo} mairo que o ritmo de {self.nome} que é {self.ritmo}")
               return oponente
-        if escolha_atribruto == "4":
+        if escolha_atribruto == 4:
           if self.fina > oponente.fina:
             print(f"{self.nome} tem a finalização {self.fina} maior que a finalização de {oponente.nome} que é {oponente.fina} ")
             return oponente
@@ -85,7 +85,7 @@ class Jogado:
             print(f"{oponente.nome} tem a finalização {oponente.fina} maior que a finalização de {self.nome} que é {self.fina}")
             return oponente
         
-        if escolha_atribruto == "5":
+        if escolha_atribruto == 5:
             if  self.fisico > oponente.fisico:
               print(f"{self.nome} tem o físico {self.fisico} maior que o físico de {oponente.nome} que é {oponente.fisico}")
               return oponente
@@ -98,7 +98,7 @@ class Jogado:
                 print(f"{oponente.nome} tem o físico {oponente.fisico} maior que o físico de {self.nome} que é {self.fisico}")
                 return oponente
         
-        if escolha_atribruto == "6":
+        if escolha_atribruto == 6:
             if self.defesa > oponente.defesa:
               print(f"{self.nome} tem a defesa {self.defesa} maior que a defesa de {oponente.nome} que é {oponente.defesa}")
               return oponente
