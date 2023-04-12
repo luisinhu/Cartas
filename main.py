@@ -1,7 +1,8 @@
-from classejogador import Jogado
+from classeJogado import Jogado
 import random
 import time
 import os
+from tkinter import *
 #informática
 #2 ano vespertino
 #Programação Orientada a Objetos
@@ -12,6 +13,8 @@ import os
 #Marcos Aurélio
 
 #inicio -Daniel
+def destruir_janela(janela):
+    janela.destroy()
 print("Olá Você está jogando um jogo de super trunfo sobre o tema de futebol\nEspero que se divirta\n")
 
 primeira_acao = int(input("Escolha uma opção.\n[1]Iniciar\n[2]Programadores\nR: "))
@@ -65,37 +68,105 @@ carta_user = lista_cartas[escolher]
 if escolher == 0:
   lista_cartas.remove(Jogador1)
   print("Essa é sua carta escolhida")
+  benzematk = Tk()
+  benzematk.title("Benzema")
+  benzemaimg = PhotoImage(file="Cartas/benzema.png")
+  benzemalabel = Label(benzematk, image=benzemaimg)
+  benzemalabel.pack()
+  benzematk.geometry("250x405")
+  benzematk.resizable(False,False)
+  btn = Button(benzematk, text="Fechar", command=lambda:destruir_janela(benzematk))
+  btn.place(x=105,y=375)
+  benzematk.mainloop()
   Jogador1.imprimir()
   
 
 if escolher == 1: #neymar
+  neymartk = Tk()
+  neymartk.title("Neymar")
+  neymarimg = PhotoImage(file="Cartas/Neymar.png")
+  neymarlabel = Label(neymartk, image=neymarimg)
+  neymarlabel.pack()
+  neymartk.geometry("250x405")
+  neymartk.resizable(False,False)
+  btn = Button(neymartk, text="Fechar", command=lambda:destruir_janela(neymartk))
+  btn.place(x=105,y=375)
   lista_cartas.remove(Jogador2)
   print("Essa é sua carta escolhida")
   Jogador2.imprimir()
+
+
 if escolher == 2: #pelé
-  lista_cartas.remove(jogador3)
+  peletk = Tk()
+  peletk.title("Pelé")
+  peleimg = PhotoImage(file="Cartas/Pelé.png")
+  pelelabel = Label(peletk, image=peleimg)
+  pelelabel.pack()
+  peletk.geometry("250x400")
+  btn = Button(peletk, text="Fechar", command=lambda:destruir_janela(peletk))
+  btn.place(x=105,y=375)
+  peletk.resizable(False,False)
   print("Essa é sua carta escolhida")
+  lista_cartas.remove(jogador3)
   jogador3.imprimir()
 
 if escolher == 3: #mbappe
-  lista_cartas.remove(jogador4)
+  bappetk = Tk()
+  bappetk.title("Mbappe")
+  bappeimg = PhotoImage(file="Cartas/mbappé.png")
+  bappelabel = Label(bappetk, image=bappeimg)
+  bappelabel.pack()
+  bappetk.geometry("250x405")
+  btn = Button(bappetk, text="Fechar", command=lambda:destruir_janela(bappetk))
+  btn.place(x=105,y=375)
+  bappetk.resizable(False,False)
   print("Essa é sua carta escolhida")
+  lista_cartas.remove(jogador4)
+
   jogador4.imprimir()
 
 
 if escolher == 4: #formiga
-  lista_cartas.remove(jogador5)
+  formigatk = Tk()
+  formigatk.title("Formiga")
+  formigaimg = PhotoImage(file="Cartas/Formiga.png")
+  formigalabel = Label(formigatk, image=formigaimg)
+  formigalabel.pack()
+  formigatk.geometry("250x405")
+  btn = Button(formigatk, text="Fechar", command=lambda:destruir_janela(formigatk))
+  btn.place(x=105,y=375)
+  formigatk.resizable(False,False)
   print("Essa é sua carta escolhida")
+  lista_cartas.remove(jogador5)
   jogador5.imprimir()
 
 if escolher == 5: #marta
-  lista_cartas.remove(jogador6)
+  martatk = Tk()
+  martatk.title("Marta")
+  martaimg = PhotoImage(file="Cartas/Marta.png")
+  martalabel = Label(martatk, image=martaimg)
+  martalabel.pack()
+  martatk.geometry("250x405")
+  btn = Button(martatk, text="Fechar", command=lambda:destruir_janela(martatk))
+  btn.place(x=105,y=375)
+  martatk.resizable(False,False)
   print("Essa é sua carta escolhida")
+  lista_cartas.remove(jogador6)
   jogador6.imprimir()
 
 if escolher == 6: #debinha
-  lista_cartas.remove(jogador7)
+  
+  debinhatk = Tk()
+  debinhatk.title("Debinha")
+  debinhaimg = PhotoImage(file="Cartas/Debinha.png")
+  debinhalabel = Label(debinhatk, image=debinhaimg)
+  debinhalabel.pack()
+  debinhatk.geometry("250x405")
+  btn = Button(debinhatk, text="Fechar", command=lambda:destruir_janela(debinhatk))
+  btn.place(x=105,y=375)
+  debinhatk.resizable(False,False)
   print("Essa é sua carta escolhida")
+  lista_cartas.remove(jogador7)
   jogador7.imprimir()
 time.sleep(4)
 os.system('cls')
